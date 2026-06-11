@@ -1,0 +1,42 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Testimonial } from "@/types";
+import { fadeUp, getMotionProps } from "@/lib/motion";
+
+interface TestimonialCardProps {
+  testimonial: Testimonial;
+}
+
+export function TestimonialCard({ testimonial }: TestimonialCardProps) {
+  return (
+    <motion.div
+      className="rounded-2xl bg-white p-6 shadow-sm md:p-8"
+      {...getMotionProps(fadeUp)}
+    >
+      <div className="mb-3 flex gap-0.5">
+        {Array.from({ length: testimonial.rating }).map((_, i) => (
+          <svg
+            key={i}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="#D4AF37"
+            className="h-5 w-5"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005z"
+              clipRule="evenodd"
+            />
+          </svg>
+        ))}
+      </div>
+      <p className="text-sm leading-relaxed text-text/70">
+        &ldquo;{testimonial.text}&rdquo;
+      </p>
+      <p className="mt-4 text-sm font-semibold text-text">
+        — {testimonial.name}
+      </p>
+    </motion.div>
+  );
+}
