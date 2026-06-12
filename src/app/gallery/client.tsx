@@ -1,11 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/SectionHeading";
+import { VideoModal } from "@/components/VideoModal";
 import { fadeUp, getMotionProps } from "@/lib/motion";
-import { assetPath } from "@/lib/utils";
 
 const galleryVideoSections = [
   {
@@ -41,6 +42,8 @@ const galleryVideoSections = [
 ];
 
 export function GalleryPageClient() {
+  const [activeVideo, setActiveVideo] = useState<{ src: string; label: string } | null>(null);
+
   return (
     <>
       {/* Hero Banner */}
@@ -57,7 +60,7 @@ export function GalleryPageClient() {
           >
             <Image
               src="/gallery/Premium_beauty_care_with_archis.jpg"
-              alt="Premium Beauty Care with Archi's"
+              alt="Premium Beauty Care with Archies"
               fill
               className="object-cover"
               priority
@@ -68,7 +71,7 @@ export function GalleryPageClient() {
                 Premium Beauty Care
               </h2>
               <p className="mt-2 max-w-lg text-sm text-white/90 md:text-base">
-                Experience the finest beauty treatments at Archi&apos;s Beauty Care
+                Experience the finest beauty treatments at Archies Beauty Care
               </p>
             </div>
           </motion.div>
@@ -102,12 +105,13 @@ export function GalleryPageClient() {
                 {section.videos.map((video, i) => (
                   <motion.div
                     key={i}
-                    className="group relative overflow-hidden rounded-2xl bg-primary/20 shadow-sm"
+                    className="group relative cursor-pointer overflow-hidden rounded-2xl bg-primary/20 shadow-sm"
                     {...getMotionProps(fadeUp)}
+                    onClick={() => setActiveVideo({ src: video.src, label: video.label })}
                   >
                     <div className="relative w-full overflow-hidden rounded-t-2xl">
                       <video
-                        src={assetPath(video.src)}
+                        src={video.src}
                         className="aspect-[9/16] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         autoPlay
                         muted
@@ -115,6 +119,16 @@ export function GalleryPageClient() {
                         playsInline
                         preload="metadata"
                       />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/30">
+                        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 opacity-0 shadow-lg transition-all duration-300 group-hover:opacity-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="ml-0.5 h-6 w-6 text-text">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="absolute left-2 top-2 rounded bg-black/60 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-white/90 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        Watch
+                      </div>
                     </div>
                     <div className="rounded-b-2xl bg-white px-4 py-3">
                       <p className="text-sm font-semibold text-text">{video.label}</p>
@@ -144,6 +158,15 @@ export function GalleryPageClient() {
           </Link>
         </div>
       </section>
+
+      {activeVideo && (
+        <VideoModal
+          src={activeVideo.src}
+          label={activeVideo.label}
+          isOpen={!!activeVideo}
+          onClose={() => setActiveVideo(null)}
+        />
+      )}
     </>
   );
 }

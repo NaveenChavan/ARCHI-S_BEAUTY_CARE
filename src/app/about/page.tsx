@@ -4,11 +4,11 @@ import { AboutPageClient } from "./client";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Archi's Beauty Care in Raichur. Discover our story, mission, and commitment to premium beauty treatments and professional training.",
+    "Learn about Archies Beauty Care in Raichur. Discover our story, mission, and commitment to premium beauty treatments and professional training.",
   openGraph: {
-    title: "About Us | Archi's Beauty Care",
+    title: "About Us | Archies Beauty Care",
     description:
-      "Discover the story behind Archi's Beauty Care — Raichur's premium beauty clinic and academy.",
+      "Discover the story behind Archies Beauty Care — Raichur's premium beauty clinic and academy.",
   },
 };
 

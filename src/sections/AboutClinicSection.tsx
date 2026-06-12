@@ -17,8 +17,8 @@ export function AboutClinicSection() {
           >
             <div className="absolute inset-0 z-10 rounded-3xl bg-gradient-to-br from-primary/30 to-gold/10" />
             <Image
-              src="/gallery/Premium_beauty_care_with_archis.jpg"
-              alt="About Archi's Beauty Care clinic"
+              src="Premium_beauty_care_with_archis.jpg"
+              alt="About Archies Beauty Care clinic"
               fill
               className="rounded-3xl object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -26,7 +26,7 @@ export function AboutClinicSection() {
           </motion.div>
           <div>
             <SectionHeading
-              title="Welcome to Archi's Beauty Care"
+              title="Welcome to Archies Beauty Care"
               subtitle="Your trusted beauty destination in Raichur"
               align="left"
             />
@@ -34,7 +34,7 @@ export function AboutClinicSection() {
               className="text-sm leading-relaxed text-text/60 md:text-base"
               {...getMotionProps(fadeUp)}
             >
-              At Archi&apos;s Beauty Care, we believe every woman deserves to
+              At Archies Beauty Care, we believe every woman deserves to
               feel confident and beautiful. Founded by Archana, our clinic
               offers a warm, professional space where advanced beauty treatments
               meet personalized care.

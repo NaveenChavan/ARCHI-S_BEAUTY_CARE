@@ -1,6 +1,6 @@
 export const seoDefaults = {
-  siteName: "Archi's Beauty Care",
-  title: "Archi's Beauty Care | Premium Beauty Clinic in Raichur",
+  siteName: "Archies Beauty Care",
+  title: "Archies Beauty Care | Premium Beauty Clinic in Raichur",
   description:
     "Premium beauty clinic in Raichur offering Hydra Facial, Korean Glass Skin, Permanent Eyebrows, Skin Brightening & Beauty Academy. Book your appointment today.",
   keywords: [
@@ -24,7 +24,7 @@ export const seoDefaults = {
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "BeautySalon",
-  name: "Archi's Beauty Care",
+  name: "Archies Beauty Care",
   image: "https://archisbeautycare.com/images/og-image.jpg", // TODO: Update
   "@id": "https://archisbeautycare.com", // TODO: Update
   url: "https://archisbeautycare.com", // TODO: Update

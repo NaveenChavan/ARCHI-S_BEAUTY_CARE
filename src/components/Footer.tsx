@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <h3 className="font-heading text-xl font-bold text-primary">
-              Archi&apos;s <span className="text-gold">Beauty Care</span>
+              Archies <span className="text-gold">Beauty Care</span>
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-white/70">
               Premium beauty clinic and academy in Raichur, offering advanced
@@ -68,7 +68,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/50">
-          &copy; {new Date().getFullYear()} Archi&apos;s Beauty Care. All rights
+          &copy; {new Date().getFullYear()} Archies Beauty Care. All rights
           reserved.
         </div>
       </div>

@@ -11,7 +11,7 @@ export function WhyChooseUsSection() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           title="Why Choose Us"
-          subtitle="What makes Archi's Beauty Care the preferred choice in Raichur"
+          subtitle="What makes Archies Beauty Care the preferred choice in Raichur"
         />
         <motion.div
           className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"

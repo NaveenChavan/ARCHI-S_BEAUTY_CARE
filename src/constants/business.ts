@@ -1,7 +1,7 @@
 import { BusinessInfo, NavLink, WhyChooseUsItem } from "@/types";
 
 export const businessInfo: BusinessInfo = {
-  name: "Archi's Beauty Care",
+  name: "Archies Beauty Care",
   owner: "Archana",
   phone: "+91 97314 90728",
   whatsapp: "917619621584",

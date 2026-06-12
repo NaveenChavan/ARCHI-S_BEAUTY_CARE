@@ -37,7 +37,7 @@ export function WhatsAppButton() {
 export function getWhatsAppUrl(serviceName?: string): string {
   const phoneNumber = "917619621584";
   const message = serviceName
-    ? `Hi! I'm interested in the *${serviceName}* service at Archi's Beauty Care. Can you please help me book an appointment?`
+    ? `Hi! I'm interested in the *${serviceName}* service at Archies Beauty Care. Can you please help me book an appointment?`
     : DEFAULT_MESSAGE;
   return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 }

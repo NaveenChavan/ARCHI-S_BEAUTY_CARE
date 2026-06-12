@@ -44,7 +44,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
         <Link href="/" className="flex items-center gap-2">
           <span className="font-heading text-xl font-bold text-text">
-            Archi&apos;s{" "}
+            Archies{" "}
             <span className="text-gold">Beauty Care</span>
           </span>
         </Link>

@@ -1,14 +1,5 @@
-export interface ServiceItem {
-  id: string;
-  title: string;
-  description: string;
-  benefits: string[];
-  image: string;
-  category: ServiceCategory;
-  whatsappMessage: string;
-}
-
-export type ServiceCategory = "skin" | "beauty" | "training";
+// Service and ServiceCategory types are defined in @/data/services (canonical)
+// GalleryItem and GalleryCategory remained unused but kept for reference
 
 export interface GalleryItem {
   id: string;
