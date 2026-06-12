@@ -26,7 +26,7 @@ export const services: Service[] = [
       "Instant glow",
       "Suitable for all skin types",
     ],
-    image: "/images/placeholder.svg",
+    image: "/services/Hydra_facial.jpg",
     category: "skin",
     whatsappMessage:
       "Hi! I'm interested in booking a *Hydra Facial* at Archi's Beauty Care. Could you let me know the availability and pricing?",
@@ -42,7 +42,7 @@ export const services: Service[] = [
       "Luminous complexion",
       "Smooth texture",
     ],
-    image: "/images/placeholder.svg",
+    image: "/services/Korean_glass_skin.jpg",
     category: "skin",
     whatsappMessage:
       "Hi! I'm interested in the *Korean Glass Skin Treatment* at Archi's Beauty Care. Can you share details about the procedure and pricing?",
@@ -58,7 +58,7 @@ export const services: Service[] = [
       "Brighter skin",
       "Improved texture",
     ],
-    image: "/images/placeholder.svg",
+    image: "/services/Chemical_Peels.png",
     category: "skin",
     whatsappMessage:
       "Hi! I'd like to know more about *Chemical Peels* at Archi's Beauty Care. Can I book a consultation?",
@@ -74,7 +74,7 @@ export const services: Service[] = [
       "Even skin tone",
       "Youthful glow",
     ],
-    image: "/images/placeholder.svg",
+    image: "/services/Skin_Brightening.png",
     category: "skin",
     whatsappMessage:
       "Hi! I'm interested in the *Skin Brightening* treatment at Archi's Beauty Care. Please share more details!",
@@ -90,7 +90,7 @@ export const services: Service[] = [
       "Gentle on skin",
       "Customized approach",
     ],
-    image: "/images/placeholder.svg",
+    image: "/services/Melasma_Treatment.jpg",
     category: "skin",
     whatsappMessage:
       "Hi! I'm struggling with melasma and would like to know about your *Melasma Treatment* at Archi's Beauty Care. Can I book a consultation?",
@@ -106,7 +106,7 @@ export const services: Service[] = [
       "Balanced oil production",
       "Cleaner complexion",
     ],
-    image: "/images/placeholder.svg",
+    image: "/services/Open_Pore_Treatment.png",
     category: "skin",
     whatsappMessage:
       "Hi! I'm interested in the *Open Pore Treatment* at Archi's Beauty Care. Can you help me with more information?",
@@ -122,7 +122,7 @@ export const services: Service[] = [
       "Time-saving",
       "Customized shape",
     ],
-    image: "/images/placeholder.svg",
+    image: "/services/Permanent_Eyebrows.jpg",
     category: "beauty",
     whatsappMessage:
       "Hi! I'm interested in *Permanent Eyebrows* at Archi's Beauty Care. I'd love to know more about the process and pricing!",
@@ -138,7 +138,7 @@ export const services: Service[] = [
       "Long-lasting",
       "Saves makeup time",
     ],
-    image: "/images/placeholder.svg",
+    image: "/services/Permanent_Lip_Colour.jpg",
     category: "beauty",
     whatsappMessage:
       "Hi! I'm interested in *Permanent Lip Colour* at Archi's Beauty Care. Can you share details about the procedure?",
@@ -170,7 +170,7 @@ export const services: Service[] = [
       "Professional tips",
       "Hands-on learning",
     ],
-    image: "/images/placeholder.svg",
+    image: "/services/Self_Grooming_Sessions.png",
     category: "training",
     whatsappMessage:
       "Hi! I'm interested in the *Self Grooming Sessions* at Archi's Beauty Care. Could you share the schedule and fees?",

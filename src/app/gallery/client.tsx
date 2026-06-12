@@ -1,119 +1,133 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { galleryImages, galleryCategories } from "@/constants/gallery";
+import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/SectionHeading";
-import { cn } from "@/utils/cn";
-import { fadeUp, scaleIn, getMotionProps } from "@/lib/motion";
+import { fadeUp, getMotionProps } from "@/lib/motion";
+import { assetPath } from "@/lib/utils";
+
+const galleryVideoSections = [
+  {
+    id: "transformations",
+    title: "Our Transformations",
+    subtitle: "Stunning skin transformations from our expert treatments",
+    videos: [
+      { src: "/gallery/Hydra_Facial_transformation.mp4", label: "Hydra Facial Transformation" },
+      { src: "/gallery/happy_customer_transformation.mp4", label: "Happy Customer Transformation" },
+      { src: "/gallery/customer_transforms.mp4", label: "Customer Transforms" },
+      { src: "/gallery/ackni_transformation.mp4", label: "Acne Transformation" },
+    ],
+  },
+  {
+    id: "before-after",
+    title: "Before & After Results",
+    subtitle: "Real results — see the difference our treatments make",
+    videos: [
+      { src: "/gallery/before_and_after_treatment.mp4", label: "Before & After Treatment" },
+      { src: "/gallery/before_and_after_the_treatment.mp4", label: "Treatment Results" },
+      { src: "/gallery/result_after_one_session.mp4", label: "Result After One Session" },
+      { src: "/gallery/BB_Glow.mp4", label: "BB Glow Result" },
+    ],
+  },
+  {
+    id: "customer-satisfaction",
+    title: "Customer Satisfaction",
+    subtitle: "Hear directly from our happy, glowing clients",
+    videos: [
+      { src: "/gallery/customer_feedback.mp4", label: "Customer Feedback" },
+    ],
+  },
+];
 
 export function GalleryPageClient() {
-  const [activeCategory, setActiveCategory] = useState("all");
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  const filtered =
-    activeCategory === "all"
-      ? galleryImages
-      : galleryImages.filter((img) => img.category === activeCategory);
-
   return (
     <>
-      <section className="bg-background pt-28 pb-12 md:pt-36 md:pb-20">
+      {/* Hero Banner */}
+      <section className="relative bg-background pt-28 pb-0 md:pt-36">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <SectionHeading
             title="Our Gallery"
-            subtitle="Real transformations from our beauty treatments"
+            subtitle="Real transformations from our premium beauty treatments"
           />
+
           <motion.div
-            className="mb-12 flex flex-wrap justify-center gap-2"
+            className="relative mb-16 h-64 w-full overflow-hidden rounded-2xl shadow-lg md:h-96 lg:h-[480px]"
             {...getMotionProps(fadeUp)}
           >
-            {galleryCategories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={cn(
-                  "rounded-full px-5 py-2 text-sm font-medium transition-all duration-200",
-                  activeCategory === cat.id
-                    ? "bg-gold text-white"
-                    : "bg-white text-text/60 hover:bg-primary/50"
-                )}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </motion.div>
-          <motion.div
-            className="grid gap-3 sm:grid-cols-2 md:grid-cols-3"
-            layout
-            key={activeCategory}
-          >
-            {filtered.map((item) => (
-              <motion.button
-                key={item.id}
-                className="group relative aspect-square overflow-hidden rounded-xl bg-primary/20"
-                variants={scaleIn}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                layout
-                onClick={() => setSelectedImage(item.src)}
-              >
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/40 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <p className="text-sm font-medium text-white">{item.title}</p>
-                </div>
-              </motion.button>
-            ))}
+            <Image
+              src="/gallery/Premium_beauty_care_with_archis.jpg"
+              alt="Premium Beauty Care with Archi's"
+              fill
+              className="object-cover"
+              priority
+              sizes="100vw"
+            />
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 px-4 text-center">
+              <h2 className="font-heading text-3xl font-bold text-white drop-shadow md:text-4xl lg:text-5xl">
+                Premium Beauty Care
+              </h2>
+              <p className="mt-2 max-w-lg text-sm text-white/90 md:text-base">
+                Experience the finest beauty treatments at Archi&apos;s Beauty Care
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelectedImage(null)}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
-          >
-            <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
-              className="relative max-h-[80vh] max-w-[90vw]"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="relative aspect-square w-full max-w-lg">
-                <Image
-                  src={selectedImage}
-                  alt="Gallery image"
-                  fill
-                  className="rounded-2xl object-contain"
-                  sizes="90vw"
-                />
-              </div>
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute -top-3 -right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white text-text shadow-lg"
-                aria-label="Close"
-              >
-                ✕
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Video Sections */}
+      <section className="bg-background pb-20">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          {galleryVideoSections.map((section) => (
+            <div key={section.id} className="mb-20">
+              <motion.div className="mb-8" {...getMotionProps(fadeUp)}>
+                <h2 className="font-heading text-2xl font-bold text-text md:text-3xl">
+                  {section.title}
+                </h2>
+                <p className="mt-1 text-sm text-text/60">{section.subtitle}</p>
+                <div className="mt-3 h-0.5 w-16 rounded bg-gold" />
+              </motion.div>
 
+              <div
+                className={`grid gap-5 ${
+                  section.videos.length === 1
+                    ? "max-w-sm mx-auto"
+                    : section.videos.length === 2
+                    ? "sm:grid-cols-2 max-w-2xl mx-auto"
+                    : section.videos.length === 3
+                    ? "sm:grid-cols-2 md:grid-cols-3"
+                    : "sm:grid-cols-2 lg:grid-cols-4"
+                }`}
+              >
+                {section.videos.map((video, i) => (
+                  <motion.div
+                    key={i}
+                    className="group relative overflow-hidden rounded-2xl bg-primary/20 shadow-sm"
+                    {...getMotionProps(fadeUp)}
+                  >
+                    <div className="relative w-full overflow-hidden rounded-t-2xl">
+                      <video
+                        src={assetPath(video.src)}
+                        className="aspect-[9/16] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                      />
+                    </div>
+                    <div className="rounded-b-2xl bg-white px-4 py-3">
+                      <p className="text-sm font-semibold text-text">{video.label}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-5 text-center md:px-8">
           <h2 className="font-heading text-2xl font-bold text-text md:text-3xl">

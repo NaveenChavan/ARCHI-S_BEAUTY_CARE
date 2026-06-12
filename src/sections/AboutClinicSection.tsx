@@ -12,12 +12,12 @@ export function AboutClinicSection() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
           <motion.div
-            className="relative aspect-square md:aspect-[4/5]"
+            className="relative aspect-square w-full overflow-hidden rounded-3xl md:aspect-[4/5]"
             {...getMotionProps(fadeUp)}
           >
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 to-gold/10" />
+            <div className="absolute inset-0 z-10 rounded-3xl bg-gradient-to-br from-primary/30 to-gold/10" />
             <Image
-              src="/images/placeholder.svg"
+              src="/gallery/Premium_beauty_care_with_archis.jpg"
               alt="About Archi's Beauty Care clinic"
               fill
               className="rounded-3xl object-cover"

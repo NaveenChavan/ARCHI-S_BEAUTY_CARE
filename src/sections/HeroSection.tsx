@@ -68,14 +68,14 @@ export function HeroSection() {
         </div>
 
         <motion.div
-          className="relative aspect-[4/5] md:aspect-square"
+          className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl md:aspect-square"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
         >
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/40 to-gold/10" />
+          <div className="absolute inset-0 z-10 rounded-3xl bg-gradient-to-br from-primary/40 to-gold/10" />
           <Image
-            src="/images/placeholder.svg"
+            src="/gallery/Premium_beauty_care_with_archis.jpg"
             alt="Premium beauty treatment at Archi's Beauty Care"
             fill
             className="rounded-3xl object-cover"

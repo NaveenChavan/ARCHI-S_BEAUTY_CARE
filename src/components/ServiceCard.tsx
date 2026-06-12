@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { type Service } from "@/data/services";
 import { getWhatsAppUrl } from "@/components/WhatsAppButton";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { assetPath } from "@/lib/utils";
 
 export function ServiceCard({
   service,
@@ -15,6 +16,7 @@ export function ServiceCard({
   index?: number;
 }) {
   const whatsappUrl = getWhatsAppUrl(service.title);
+  const imageSrc = service.image || "/images/placeholder.svg";
 
   return (
     <motion.div
@@ -24,13 +26,19 @@ export function ServiceCard({
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <div className="relative mb-5 aspect-[4/3] overflow-hidden rounded-xl bg-primary/30">
+      <div className="relative mb-5 aspect-[4/3] w-full overflow-hidden rounded-xl bg-primary/30">
         <Image
-          src={service.image}
+          src={imageSrc}
           alt={service.title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          onError={(e) => {
+            const target = e.currentTarget as HTMLImageElement;
+            if (!target.src.includes("placeholder")) {
+              target.src = assetPath("/images/placeholder.svg");
+            }
+          }}
         />
       </div>
 
