@@ -1,6 +1,6 @@
 export const seoDefaults = {
-  siteName: "Archies Beauty Care",
-  title: "Archies Beauty Care | Premium Beauty Clinic in Raichur",
+  siteName: "Archies Beauty Clinic",
+  title: "Archies Beauty Clinic | Premium Beauty Clinic in Raichur",
   description:
     "Premium beauty clinic in Raichur offering Hydra Facial, Korean Glass Skin, Permanent Eyebrows, Skin Brightening & Beauty Academy. Book your appointment today.",
   keywords: [
@@ -12,22 +12,22 @@ export const seoDefaults = {
     "Korean Glass Skin Raichur",
     "Beauty Parlour Raichur",
     "Skin Care Raichur",
-    "Archis Beauty Care",
+    "Archies Beauty Clinic",
     "Beauty Treatments Raichur",
   ],
-  url: "https://archisbeautycare.com", // TODO: Update with actual domain
+  url: "https://archiesbeautyclinic.com", // TODO: Update with actual domain
   locale: "en_IN",
   image: "/images/og-image.jpg", // TODO: Create Open Graph image
-  twitterHandle: "@archisbeautycare",
+  twitterHandle: "@archiesbeautyclinic",
 };
 
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "BeautySalon",
-  name: "Archies Beauty Care",
-  image: "https://archisbeautycare.com/images/og-image.jpg", // TODO: Update
-  "@id": "https://archisbeautycare.com", // TODO: Update
-  url: "https://archisbeautycare.com", // TODO: Update
+  name: "Archies Beauty Clinic",
+  image: "https://archiesbeautyclinic.com/images/og-image.jpg", // TODO: Update
+  "@id": "https://archiesbeautyclinic.com", // TODO: Update
+  url: "https://archiesbeautyclinic.com", // TODO: Update
   telephone: "+91 97314 90728",
   email: "archuarchi2006@gmail.com",
   address: {

@@ -46,34 +46,8 @@ export function GalleryPageClient() {
 
   return (
     <>
-      {/* Hero Banner */}
-      <section className="relative bg-background pt-28 pb-0 md:pt-36">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <SectionHeading
-            title="Our Gallery"
-            subtitle="Real transformations from our premium beauty treatments"
-          />
-
-          <motion.div
-            className="relative mb-16 h-64 w-full overflow-hidden rounded-2xl shadow-lg md:h-96 lg:h-[480px] bg-primary/20"
-            {...getMotionProps(fadeUp)}
-          >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="h-20 w-20 text-gold/50"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-              </svg>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Video Sections */}
-      <section className="bg-background pb-20">
+      <section className="bg-background pt-28 pb-20 md:pt-36">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           {galleryVideoSections.map((section) => (
             <div key={section.id} className="mb-20">
@@ -144,7 +118,7 @@ export function GalleryPageClient() {
           </p>
           <Link
             href="/contact"
-            className="mt-6 inline-block rounded-lg bg-gold px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-gold/90 hover:shadow-lg"
+            className="mt-6 inline-block rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-gold/90 hover:shadow-lg"
           >
             Book Appointment
           </Link>

@@ -10,7 +10,7 @@ export function TestimonialsSection() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           title="What Our Clients Say"
-          subtitle="Trusted by women in Raichur for premium beauty care"
+          subtitle="Trusted by women in Raichur for premium beauty care at Archies Beauty Clinic"
         />
         <div className="grid gap-6 sm:grid-cols-2">
           {testimonials.map((testimonial) => (

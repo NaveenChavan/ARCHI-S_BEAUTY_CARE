@@ -27,7 +27,7 @@ export function AboutClinicSection() {
           </motion.div>
           <div>
             <SectionHeading
-              title="Welcome to Archies Beauty Care"
+              title="Welcome to Archies Beauty Clinic"
               subtitle="Your trusted beauty destination in Raichur"
               align="left"
             />
@@ -35,7 +35,7 @@ export function AboutClinicSection() {
               className="text-sm leading-relaxed text-text/60 md:text-base"
               {...getMotionProps(fadeUp)}
             >
-              At Archies Beauty Care, we believe every woman deserves to
+              At Archies Beauty Clinic, we believe every woman deserves to
               feel confident and beautiful. Founded by Archana, our clinic
               offers a warm, professional space where advanced beauty treatments
               meet personalized care.

@@ -39,7 +39,7 @@ export function HeroSection() {
             animate="visible"
           >
             Experience premium skincare, beauty treatments, and professional
-            grooming at Archies Beauty Care. Personalized care for every
+            grooming at Archies Beauty Clinic. Personalized care for every
             woman.
           </motion.p>
 
@@ -76,7 +76,7 @@ export function HeroSection() {
           <div className="absolute inset-0 z-10 rounded-3xl bg-gradient-to-br from-primary/40 to-gold/10" />
           <img
             src={assetPath("/gallery/Premium_beauty_care_with_archis.jpg")}
-            alt="Premium beauty treatment at Archies Beauty Care"
+            alt="Premium beauty treatment at Archies Beauty Clinic"
             className="absolute inset-0 h-full w-full rounded-3xl object-cover"
           />
         </motion.div>

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { ServicesPageClient } from "./client";
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Our Services | Archies Beauty Clinic",
   description:
-    "Explore premium beauty services in Raichur including Hydra Facial, Korean Glass Skin, Permanent Eyebrows, Skin Treatments, and Beauty Academy programs at Archies Beauty Care.",
+    "Explore premium beauty services in Raichur including Hydra Facial, Korean Glass Skin, Permanent Eyebrows, Skin Treatments, and Beauty Academy programs at Archies Beauty Clinic.",
   openGraph: {
-    title: "Our Services | Archies Beauty Care",
+    title: "Our Services | Archies Beauty Clinic",
     description:
-      "Premium beauty services in Raichur — skin treatments, beauty enhancements, and academy programs.",
+      "Discover premium beauty treatments and academy programs at Archies Beauty Clinic in Raichur.",
   },
 };
 

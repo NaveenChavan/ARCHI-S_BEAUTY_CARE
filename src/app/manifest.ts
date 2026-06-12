@@ -4,7 +4,7 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Archies Beauty Care",
+    name: "Archies Beauty Clinic",
     short_name: "Archies Beauty",
     description:
       "Premium beauty clinic and academy in Raichur. Book appointments for skin treatments, facials, permanent makeup, and more.",

@@ -11,7 +11,7 @@ export function FinalCTASection() {
   return (
     <section className="bg-gradient-to-br from-primary/30 to-gold/10 py-16 md:py-24">
       <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
-        <motion.h2
+<motion.h2
           className="font-heading text-2xl font-bold text-text md:text-3xl lg:text-4xl"
           {...scrollFadeIn(fadeInUp)}
         >
@@ -23,7 +23,7 @@ export function FinalCTASection() {
           {...scrollFadeIn(fadeInUp)}
         >
           Book your consultation today and experience premium beauty care
-          tailored just for you.
+          at Archies Beauty Clinic.
         </motion.p>
 
         <motion.div

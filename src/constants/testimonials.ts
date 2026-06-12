@@ -5,7 +5,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "t1",
     name: "Priya S.",
-    text: "Absolutely loved my Hydra Facial experience! My skin felt so fresh and glowing. Highly recommend Archies Beauty Care.",
+    text: "Absolutely loved my Hydra Facial experience! My skin felt so fresh and glowing. Highly recommend Archies Beauty Clinic.",
     rating: 5,
   },
   {

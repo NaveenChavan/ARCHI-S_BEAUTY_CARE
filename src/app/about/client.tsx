@@ -37,7 +37,7 @@ export function AboutPageClient() {
                   Our Story
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-text/60 md:text-base">
-                  Archies Beauty Care was founded with a simple vision —
+                  Archies Beauty Clinic was founded with a simple vision —
                   to provide premium, personalized beauty treatments in a warm
                   and professional environment. Based in Raichur, Karnataka, we
                   have grown into a trusted destination for women seeking
@@ -115,7 +115,7 @@ export function AboutPageClient() {
               Meet Archana
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-text/60 md:text-base">
-              Behind Archies Beauty Care is Archana — a passionate beauty
+              Behind Archies Beauty Clinic is Archana — a passionate beauty
               professional dedicated to helping women look and feel their best.
               With a deep understanding of skincare and beauty techniques, she
               leads a team that puts your confidence first.
