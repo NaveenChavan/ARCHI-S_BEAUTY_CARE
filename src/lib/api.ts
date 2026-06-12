@@ -70,11 +70,12 @@ export async function submitAppointment(
 
   try {
     // Google Apps Script requires no-cors mode
+    // Must use text/plain (not application/json) because no-cors only allows simple Content-Type values
     await fetch(APPOINTMENT_API_URL, {
       method: "POST",
       mode: "no-cors",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "text/plain",
       },
       body: JSON.stringify({
         fullName: data.fullName,
