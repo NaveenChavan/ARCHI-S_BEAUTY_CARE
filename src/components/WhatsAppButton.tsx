@@ -6,7 +6,7 @@ const DEFAULT_MESSAGE =
   "Hi! I'm interested in your beauty services. Can you please help me book an appointment?";
 
 export function WhatsAppButton() {
-  const phoneNumber = "917619621584";
+  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917619621584";
   const encodedMessage = encodeURIComponent(DEFAULT_MESSAGE);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
@@ -35,7 +35,7 @@ export function WhatsAppButton() {
 }
 
 export function getWhatsAppUrl(serviceName?: string): string {
-  const phoneNumber = "917619621584";
+  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917619621584";
   const message = serviceName
     ? `Hi! I'm interested in the *${serviceName}* service at Archies Beauty Clinic. Can you please help me book an appointment?`
     : DEFAULT_MESSAGE;

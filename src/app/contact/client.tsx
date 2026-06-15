@@ -127,21 +127,35 @@ export function ContactPageClient() {
               </motion.div>
 
               <motion.div
-                className="overflow-hidden rounded-2xl shadow-sm"
+                className="rounded-2xl bg-white p-6 shadow-sm md:p-8"
                 {...getMotionProps(fadeUp)}
               >
-                <div className="aspect-video w-full bg-primary/30">
-                  <iframe
-                    src={businessInfo.mapEmbedUrl}
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Location Map"
-                    className="rounded-2xl"
-                  />
+                <h3 className="font-heading text-lg font-semibold text-text">
+                  Find Us
+                </h3>
+                <div className="mt-4 flex items-start gap-3">
+                  <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/50">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h-5 w-5 text-gold"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.079 3.218-4.402 3.218-6.853A8.25 8.25 0 0012 3.75a8.25 8.25 0 00-8.25 8.25c0 2.451 1.274 4.774 3.218 6.853a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.143.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-text">
+                      Archies Beauty Clinic
+                    </p>
+                    <p className="mt-1 text-sm text-text/60">
+                      {businessInfo.address}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             </div>

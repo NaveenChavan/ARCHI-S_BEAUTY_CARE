@@ -11,9 +11,6 @@ export const businessInfo: BusinessInfo = {
   address: "Raichur, Karnataka, India",
   city: "Raichur",
   state: "Karnataka",
-  // TODO: Replace with actual Google Maps embed URL
-  mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.966309591627!2d-73.985428!3d40.748817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU1LjciTiA3M8KwNTknMDcuNCJX!5e0!3m2!1sen!2sin!4v1",
   businessHours: [
     { day: "Monday - Saturday", hours: "10:00 AM - 8:00 PM" },
     { day: "Sunday", hours: "By Appointment Only" },

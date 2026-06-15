@@ -28,7 +28,6 @@ export interface BusinessInfo {
   address: string;
   city: string;
   state: string;
-  mapEmbedUrl: string;
   businessHours: BusinessHours[];
 }
 

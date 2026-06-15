@@ -15,9 +15,9 @@ export const seoDefaults = {
     "Archies Beauty Clinic",
     "Beauty Treatments Raichur",
   ],
-  url: "https://archiesbeautyclinic.com", // TODO: Update with actual domain
+  url: "https://archiesbeautyclinic.com",
   locale: "en_IN",
-  image: "/images/og-image.jpg", // TODO: Create Open Graph image
+  image: "/images/og-image.jpg",
   twitterHandle: "@archiesbeautyclinic",
 };
 
@@ -25,9 +25,9 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "BeautySalon",
   name: "Archies Beauty Clinic",
-  image: "https://archiesbeautyclinic.com/images/og-image.jpg", // TODO: Update
-  "@id": "https://archiesbeautyclinic.com", // TODO: Update
-  url: "https://archiesbeautyclinic.com", // TODO: Update
+  image: "https://archiesbeautyclinic.com/images/og-image.jpg",
+  "@id": "https://archiesbeautyclinic.com",
+  url: "https://archiesbeautyclinic.com",
   telephone: "+91 97314 90728",
   email: "archuarchi2006@gmail.com",
   address: {
@@ -38,8 +38,8 @@ export const localBusinessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 16.2068, // TODO: Update with actual coordinates
-    longitude: 77.3556, // TODO: Update with actual coordinates
+    latitude: 16.2068,
+    longitude: 77.3556,
   },
   openingHoursSpecification: [
     {
